@@ -1,42 +1,42 @@
 # credit-risk-classification
-#### Task background
+## Task background
 In this Challenge, you’ll use various techniques to train and evaluate a model based on loan risk. You’ll use a dataset of historical lending activity from a peer-to-peer lending services company to build a model that can identify the creditworthiness of borrowers.
-#### Instructions
-## Split the Data into Training and Testing Sets
+## Instructions
+#### Split the Data into Training and Testing Sets
 1. Read the lending_data.csv data from the Resources folder into a Pandas DataFrame.
 2. Create the labels set (y) from the “loan_status” column, and then create the features (X) DataFrame from the remaining columns.
 3. Split the data into training and testing datasets by using train_test_split.
-## Create a Logistic Regression Model with the Original Data
+#### Create a Logistic Regression Model with the Original Data
 1. Fit a logistic regression model by using the training data (X_train and y_train).
 2. Save the predictions for the testing data labels by using the testing feature data (X_test) and the fitted model.
 3. Evaluate the model’s performance by doing the following: Generate a confusion matrix. Print the classification report.
 4. Answer the following question: How well does the logistic regression model predict both the 0 (healthy loan) and 1 (high-risk loan) labels?
-## Write a Credit Risk Analysis Report
+#### Write a Credit Risk Analysis Report
 1. Write a brief report that includes a summary and analysis of the performance of the machine learning models that you used in this homework. You should write this report as the README.md file included in your GitHub repository.
 2. An overview of the analysis: Explain the purpose of this analysis.
 3. The results: Using a bulleted list, describe the accuracy score, the precision score, and recall score of the machine learning model.
 4. A summary: Summarise the results from the machine learning model. Include your justification for recommending the model for use by the company. If you don’t recommend the model, justify your reasoning.
 
-#### Analysis report
-## Overview
+## Analysis report
+#### Overview
 * The purpose of this analysis is to train and evaluate machine learning models based on loan risk in order to identify the creditworthiness of borrowers.
 * The focus in the data (CSV) file is the loan status column. The features in the financial data that are used to predict loan status (outcome) are loan size, interest rate, borrower income, debt to income ratio, number of accounts, derogatory marks and total debt.
 * For the target values of loan_status there are two variables which I have tried to predict from this whole dataset. The first set of variables have a value of '0' (value count of 75036) for healthy loans. The second set of variables have a value of '1' (value count of 2500) and these are high-risk loans.
 * For the model testing we separated all observable data with its results, which made the outcome data separate from the machine learning process. 
 * Basic process includes spliting the data into training and testing, creating a regression model, fiting this to the training data, making a prediction based on this, creating a confusion matrix and classification report to anaylse the results.
 
-## Results
+#### Results
 * The accuracy score is 99% which means model works very well to predict loan outcomes!
 * Healthy loans have ideal precision and f1 scores at 100%.
 * High-risk loans' have only 85% precision (15% lower than healthy loans). 
 * This model has a recall score of 99% for the healthy loans and 91% for the high-risk loans. The scores imply that for all the instances where the loans were actually healthy, 99% of the times they were classified correctly (true positives). However, for all the instances where the loans were actually high-risk, they were classified correctly only 91% of the times.
 
-## Summary
+#### Summary
 * It is important to predict both the ones and zeros in order to determine a the creditworthiness of borrowers. Being able to compare the two allows for well-rounded predictions and conclusions to be made.
 * If the goal is to predict healthy loans, this model should be immediately implemented due to 100% precision and 99% accuracy in predicting the outcome. If the goal is to predict high risk loans, the model should be further imporved before using it as a prediction tool because the precision was only 85% and discerning potential high-risk loans is of most importance because those accounts are responsible for the majority of the institituions profit/loss potential and managing this well can create a more significant impact on the institutuon than healthy loans.
 * Overall, I would recommend this linear regression model should be implemented by the lending company to predict the creditworthiness of borrowers for healthy loans, because it has over 99% accuracy.
 
-#### Dependencies
+## Dependencies
 * Jupyter Notebook
 * CSV file
 * scikit-learn
